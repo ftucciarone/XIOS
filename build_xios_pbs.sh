@@ -10,5 +10,5 @@
 
 source setup_gadi_env.sh
 
-./make_xios --prod --full --netcdf_lib netcdf4_par --arch X64_GADI --job 8
+./make_xios --prod --full --use_oasis oasis3_mct --netcdf_lib netcdf4_par --arch X64_GADI --job 8
 

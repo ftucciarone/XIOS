@@ -10,6 +10,10 @@ HDF5_INCDIR="-I /apps/hdf5/1.10.7p/include"
 HDF5_LIBDIR="-L /apps/hdf5/1.10.7p/lib"
 HDF5_LIB="-lhdf5_hl -lhdf5 -lz -lcurl"
 
-OASIS_INCDIR=
-OASIS_LIBDIR=
-OASIS_LIB=
+
+
+OASIS_ROOT_DIR="/g/data/e14/rmh561/oasis3-mct-3.0/build"
+OASIS_INCDIR="-I${OASIS_ROOT_DIR}/build/lib/psmile.MPI1 \
+               -I${OASIS_ROOT_DIR}/build/lib/mct"
+OASIS_LIBDIR="-L${OASIS_ROOT_DIR}/lib"
+OASIS_LIB="-lpsmile.MPI1 -lscrip -lmct -lmpeu"
