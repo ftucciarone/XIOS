@@ -1,24 +1,15 @@
-NETCDF_LIBDIR="-L/apps/netcdf/4.7.1/lib/Intel"
-NETCDF_INCDIR="-I/apps/netcdf/4.7.1/include/Intel"
-NETCDF_LIB="-L/apps/netcdf/4.7.1/lib/Intel -lnetcdff -L/apps/netcdf/4.7.1/lib -lnetcdf -ldl -lm"
+NETCDF_INCDIR="-I /apps/netcdf/4.8.0p/include"
+NETCDF_LIBDIR="-L /apps/netcdf/4.8.0p/lib"
+NETCDF_LIB="-lnetcdff -lnetcdf"
 
-MPIF90="mpif90"
-MPIDIR=$(dirname $(dirname $(which $MPIF90) ))
-MPI_LIB="-L$MPIDIR/lib -lmpi -limf -lm"
-MPI_INCDIR="$MPIDIR/include"
-MPI_LIBDIR="-L$MPIDIR/lib"
+MPI_INCDIR=""
+MPI_LIBDIR=""
+MPI_LIB=""
 
-HDF5_INCDIR=""
-HDF5_LIBDIR=""
-HDF5_LIB=""
+HDF5_INCDIR="-I /apps/hdf5/1.10.7p/include"
+HDF5_LIBDIR="-L /apps/hdf5/1.10.7p/lib"
+HDF5_LIB="-lhdf5_hl -lhdf5 -lz -lcurl"
 
-BOOST_INCDIR="-I/apps/boost/1.77.0/include"
-BOOST_LIBDIR="-L/apps/boost/1.77.0/lib"
-BOOST_LIB=""
-
-
-OASIS_ROOT_DIR="/g/data/e14/rmh561/oasis3-mct-3.0/build"
-OASIS_INCDIR="-I${OASIS_ROOT_DIR}/build/lib/psmile.MPI1 \
-		-I${OASIS_ROOT_DIR}/build/lib/mct"
-OASIS_LIBDIR="-L${OASIS_ROOT_DIR}/lib"
-OASIS_LIB="-lpsmile.MPI1 -lscrip -lmct -lmpeu"
+OASIS_INCDIR=
+OASIS_LIBDIR=
+OASIS_LIB=
